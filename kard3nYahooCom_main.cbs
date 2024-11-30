@@ -1,0 +1,20 @@
+url: yahoo.com
+path: \/(\?guccounter=1)$
+type: html
+subdomains: de,us,
+schema:
+html_tag:'li', content_tags:'e', data-type:'.*?'
+    html_tag:'h3', content_tags:'ta', edit_attrs:'href:l'
+    html_tag:'a', content_tags:'', edit_attrs:'href:l'
+    html_tag:'img', edit_attrs:'src:p'
+# for main image
+html_tag:'div', content_tags:'e', class:'.*?ntk-lead.*?'
+    html_tag:'h3', content_tags:'ta', edit_attrs:'href:l'
+    html_tag:'p', content_tags:'sa', edit_attrs:'href:l'
+    html_tag:'a', content_tags:'', edit_attrs:'href:l'
+    html_tag:'img', edit_attrs:'src:p'
+# for stream items
+html_tag:'li', content_tags:'e', data-uuid:'.*?'
+    html_tag:'a', content_tags:'ta', edit_attrs:'href:l', class:'.*stream-title.*'
+    html_tag:'p', content_tags:'sa',  data-test-locator:'stream-item-summary'
+    html_tag:'img', edit_attrs:'src:p'
